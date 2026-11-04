@@ -112,7 +112,9 @@ h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,8.4vw,3.8
 .proj p{margin:0;color:var(--muted);font-size:.95rem}
 .proj a.gh{align-self:flex-start;font-weight:700;font-size:.92rem;color:var(--berry);text-decoration:none;border-bottom:2px solid var(--line)}
 .proj a.gh:hover{border-bottom-color:var(--berry)}
-.proj .links{display:flex;flex-wrap:wrap;gap:6px 16px}
+.proj .links,.item .links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:6px}
+.item .gh{align-self:flex-start;font-weight:700;font-size:.92rem;color:var(--berry);text-decoration:none;border-bottom:2px solid var(--line)}
+.item video.clip{width:100%;max-width:520px;aspect-ratio:16/9;border-radius:14px;margin-top:8px;background:#000}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
 .tags span{font-size:.8rem;font-weight:600;color:var(--berry);background:var(--paper);border-radius:999px;padding:1px 10px}
 .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px}
@@ -329,9 +331,11 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
           <p data-i="exp2-p">Represent my cohort and pass student feedback to the programme team.</p>
         </div>
         <div class="item">
-          <div class="row"><strong data-i="exp7">Tourism Programme Events</strong><span class="when" data-i="exp7-d">Beijing &amp; Henan</span></div>
-          <span class="where">你好河南 (Hello Henan) · 全球南方 Z 世代看北京 (Global South Gen Z Sees Beijing)</span>
-          <p data-i="exp7-p">Worked on tourism programmes introducing Henan and Beijing to young international audiences; named as 李恩心 in the programmes' official WeChat coverage.</p>
+          <div class="row"><strong data-i="exp7">Tourism Programme Events</strong><span class="when" data-i="exp7-d">Henan 2024 · Beijing</span></div>
+          <span class="where">打卡中国 · 你好，河南！(Daka China · Hello, Henan!) · 全球南方 Z 世代看北京 (Global South Gen Z Sees Beijing)</span>
+          <p data-i="exp7-p">Took part in the 2024 Daka China programme "Ancient Charm, Modern Wave · Hello, Henan!", exploring Henan's heritage sites, performances and night culture, and made a video sharing it with international audiences. Also joined "Global South Gen Z Sees Beijing". Named as 李恩心 in the official coverage.</p>
+          <video class="clip" controls preload="none" playsinline poster="media/hello-henan.jpg" src="media/hello-henan.mp4" aria-label="My Hello, Henan! video"></video>
+          <div class="links"><a class="gh" href="https://weixin.qq.com/sph/ASldyxrAhq" target="_blank" rel="noopener" data-i="exp7-l">Watch the Beijing video on WeChat Channels →</a></div>
         </div>
         <div class="item">
           <div class="row"><strong data-i="exp4">AI Data Quality Intern, Audio & Annotation</strong><span class="when">Feb – Apr 2025</span></div>
@@ -480,7 +484,7 @@ const ZH={
   exp1:"自由职业内容创作者","exp1-w":"YouTube · Instagram · 小红书","exp1-p":"独立运营内容事业，与 50+ 国际品牌合作。详见下方。",
   exp3:"学院学生代表（科学、工程、数学与技术）","exp3-w":"布里斯托大学","exp3-p":"代表全学院学生，向学院教职人员反馈意见。",
   exp2:"人工智能硕士 课程代表","exp2-w":"布里斯托大学","exp2-p":"代表同届同学，向课程团队反馈意见。",
-  exp7:"文旅项目活动","exp7-d":"北京和河南","exp7-p":"参与向国际青年介绍河南和北京的文旅项目，官方微信公众号报道中署名李恩心。",
+  exp7:"文旅项目活动","exp7-d":"河南 2024 · 北京","exp7-p":"参加 2024 年“打卡中国·古韵潮音，你好，河南！”活动，探访河南的历史古迹、文艺演出和夜间文化，并制作视频向国际观众分享。还参加了“全球南方 Z 世代看北京”。官方报道中署名李恩心。","exp7-l":"在微信视频号观看北京视频 →",
   exp4:"AI 数据质检实习生（音频与标注）","exp4-p":"检查音频数据和标注结果的准确性、一致性和完整性，协助修正标注问题，提高数据集可靠性。",
   exp5:"医疗助理","exp5-w":"马来西亚 Klinik Ling 诊所 · 兼职","exp5-p":"在繁忙的诊所安排 100+ 次预约，办理患者登记，管理 100+ 位患者的资料。",
   exp6:"服务员","exp6-w":"兼职，与硕士学习同时进行",
