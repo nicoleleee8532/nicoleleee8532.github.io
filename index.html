@@ -116,6 +116,9 @@ h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,8.4vw,3.8
 .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0 6px;align-items:start}
 .shots a{display:block;text-decoration:none;color:var(--berry);font-weight:700;font-size:.92rem}
 .shots img{display:block;width:100%;height:auto;border-radius:16px;border:2px solid var(--line);margin-bottom:6px}
+.proof{display:inline-block;margin-top:8px;text-decoration:none;color:var(--berry);font-weight:700;font-size:.92rem}
+.proof img{display:block;width:150px;height:auto;border-radius:10px;border:2px solid var(--line);margin-bottom:4px}
+.proof.badge img{width:120px}
 .wins .gh,.item .gh{align-self:flex-start;font-weight:700;font-size:.92rem;color:var(--berry);text-decoration:none;border-bottom:2px solid var(--line)}
 .item video.clip{width:100%;max-width:520px;aspect-ratio:16/9;border-radius:14px;margin-top:8px;background:#000}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
@@ -299,15 +302,18 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
       <h2><svg class="doodle" viewBox="0 0 40 40"><circle cx="20" cy="16" r="10" class="butter st" stroke-width="2"/><path d="M14 24l-3 12 9-5 9 5-3-12" class="berry st" stroke-width="2"/></svg><span data-i="h-awards">Awards & programmes</span></h2>
       <div class="item">
         <div class="row"><strong data-i="aw1">Second Prize, vivo AIGC Competition</strong><span class="when">May 2026</span></div>
-        <p data-i="aw1-p">North China Division, team event. An AI-generated video designing the smartphone of the future.</p>
+        <p data-i="aw1-p">China Collegiate Computing Contest, AIGC Innovation track (run with vivo and Nankai University). Second Prize, North China Division, for our team project SIS HOLO, an AI-designed smartphone of the future.</p>
+        <a class="proof" href="media/aigc-certificate.jpg" target="_blank" rel="noopener"><img src="media/aigc-certificate.jpg" alt="Award certificate: Second Prize, North China Division, AIGC Innovation Contest 2026, for SIS HOLO" loading="lazy"><span data-i="pf-cert">View certificate →</span></a>
       </div>
       <div class="item">
-        <strong data-i="aw2">Cambridge Deep Learning Winter Program</strong>
-        <p data-i="aw2-p">3-week deep learning programme at the University of Cambridge.</p>
+        <div class="row"><strong data-i="aw2">Deep Learning Course, Cambridge</strong><span class="when">Feb 2025</span></div>
+        <p data-i="aw2-p">2-week course in Cambridge, UK, run by Oxbridge Neural Group and led by Prof. Nic Lane. His letter notes I mastered concepts quickly, asked insightful questions and led group discussions.</p>
+        <div class="links"><a class="gh" href="media/deep-learning-letter.pdf" target="_blank" rel="noopener" data-i="pf-letter">Read the letter (PDF) →</a></div>
       </div>
       <div class="item">
-        <strong data-i="aw3">Bristol Intensive Selection Camp</strong>
-        <p data-i="aw3-p">3 weeks of computer science, fintech and engineering at the University of Bristol.</p>
+        <div class="row"><strong data-i="aw3">Bristol Intensive Selection Camp</strong><span class="when">Jul 2026</span></div>
+        <p data-i="aw3-p">10–31 July 2026. 3 weeks of computer science, fintech and engineering at the University of Bristol.</p>
+        <a class="proof badge" href="media/bristol-camp.jpg" target="_blank" rel="noopener"><img src="media/bristol-camp.jpg" alt="University of Bristol Intensive Selection Camp badge, Nicole En Xin Lee, 10–31 July 2026" loading="lazy"></a>
       </div>
       <div class="item">
         <strong data-i="aw4">Meta Introduction to Front-End Development</strong>
@@ -483,9 +489,9 @@ const ZH={
   edu1:"人工智能 硕士","edu1-w":"英国 布里斯托大学","edu1-p":"软件开发、算法、统计计算、深度学习、大语言模型。",
   edu2:"计算机科学 学士","edu2-w":"中国 北京理工大学","edu2-p":"GPA 3.4/4.0 · 北京市政府奖学金。机器学习、数据结构与算法、计算机网络、大数据、Web 开发。",
   "h-awards":"奖项与项目经历",
-  aw1:"vivo AIGC 大赛 二等奖","aw1-p":"华北赛区团队赛。用 AI 生成视频设计未来手机。",
-  aw2:"剑桥大学深度学习冬季项目","aw2-p":"在剑桥大学为期三周的深度学习课程。",
-  aw3:"布里斯托强化选拔营","aw3-p":"在布里斯托大学为期三周的计算机、金融科技与工程课程。",
+  aw1:"vivo AIGC 大赛 二等奖","aw1-p":"中国高校计算机大赛 AIGC 创新赛（vivo 与南开大学联合举办）创作赛道华北赛区二等奖，团队作品 SIS HOLO：用 AI 设计的未来手机。","pf-cert":"查看获奖证书 →","pf-letter":"阅读推荐信（PDF）→",
+  aw2:"剑桥深度学习课程","aw2-p":"在英国剑桥为期两周的课程，由 Oxbridge Neural Group 举办、Nic Lane 教授主讲。推荐信提到我很快掌握概念、提问有深度，并带领小组讨论。",
+  aw3:"布里斯托强化选拔营","aw3-p":"2026 年 7 月 10 日至 31 日。在布里斯托大学为期三周的计算机、金融科技与工程课程。",
   aw4:"Meta 前端开发入门证书","aw4-p":"UI、CSS、React.js、HTML 和 JavaScript 框架。",
   "h-exp":"工作经历",
   exp1:"自由职业内容创作者","exp1-w":"YouTube · Instagram · 小红书","exp1-p":"独立运营内容事业，与 50+ 国际品牌合作。详见下方。",
