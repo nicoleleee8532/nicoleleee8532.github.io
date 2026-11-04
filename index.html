@@ -119,6 +119,7 @@ h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,8.4vw,3.8
 .proof{display:inline-block;margin-top:8px;text-decoration:none;color:var(--berry);font-weight:700;font-size:.92rem}
 .proof img{display:block;width:150px;height:auto;border-radius:10px;border:2px solid var(--line);margin-bottom:4px}
 .proof.badge img{width:120px}
+.proof.wide img{width:200px}
 .wins .gh,.item .gh{align-self:flex-start;font-weight:700;font-size:.92rem;color:var(--berry);text-decoration:none;border-bottom:2px solid var(--line)}
 .item video.clip{width:100%;max-width:520px;aspect-ratio:16/9;border-radius:14px;margin-top:8px;background:#000}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
@@ -316,8 +317,9 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
         <a class="proof badge" href="media/bristol-camp.jpg" target="_blank" rel="noopener"><img src="media/bristol-camp.jpg" alt="University of Bristol Intensive Selection Camp badge, Nicole En Xin Lee, 10–31 July 2026" loading="lazy"></a>
       </div>
       <div class="item">
-        <strong data-i="aw4">Meta Introduction to Front-End Development</strong>
-        <p data-i="aw4-p">UI, CSS, React.js, HTML and JavaScript frameworks.</p>
+        <div class="row"><strong data-i="aw4">Meta Introduction to Front-End Development</strong><span class="when">Sep 2025</span></div>
+        <p data-i="aw4-p">Coursera course by Meta. UI, CSS, React.js, HTML and JavaScript frameworks.</p>
+        <a class="proof wide" href="https://coursera.org/verify/044JYL66H66Q" target="_blank" rel="noopener"><img src="media/meta-frontend-certificate.jpg" alt="Coursera certificate: Introduction to Front-End Development by Meta, Nicole Lee En Xin, 2 September 2025" loading="lazy"><span data-i="pf-verify">Verify on Coursera →</span></a>
       </div>
     </section>
 
@@ -492,7 +494,7 @@ const ZH={
   aw1:"vivo AIGC 大赛 二等奖","aw1-p":"中国高校计算机大赛 AIGC 创新赛（vivo 与南开大学联合举办）创作赛道华北赛区二等奖，团队作品 SIS HOLO：用 AI 设计的未来手机。","pf-cert":"查看获奖证书 →","pf-letter":"阅读推荐信（PDF）→",
   aw2:"剑桥深度学习课程","aw2-p":"在英国剑桥为期两周的课程，由 Oxbridge Neural Group 举办、Nic Lane 教授主讲。推荐信提到我很快掌握概念、提问有深度，并带领小组讨论。",
   aw3:"布里斯托强化选拔营","aw3-p":"2026 年 7 月 10 日至 31 日。在布里斯托大学为期三周的计算机、金融科技与工程课程。",
-  aw4:"Meta 前端开发入门证书","aw4-p":"UI、CSS、React.js、HTML 和 JavaScript 框架。",
+  aw4:"Meta 前端开发入门证书","pf-verify":"在 Coursera 验证 →","aw4-p":"Meta 在 Coursera 开设的课程。UI、CSS、React.js、HTML 和 JavaScript 框架。",
   "h-exp":"工作经历",
   exp1:"自由职业内容创作者","exp1-w":"YouTube · Instagram · 小红书","exp1-p":"独立运营内容事业，与 50+ 国际品牌合作。详见下方。",
   exp3:"学院学生代表（科学、工程、数学与技术）","exp3-w":"布里斯托大学","exp3-p":"代表全学院学生，向学院教职人员反馈意见。",
