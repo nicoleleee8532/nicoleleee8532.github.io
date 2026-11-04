@@ -110,6 +110,9 @@ h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,8.4vw,3.8
 .proj{background:var(--bg);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .proj strong{font-size:1.05rem}
 .proj p{margin:0;color:var(--muted);font-size:.95rem}
+.proj a.gh{align-self:flex-start;font-weight:700;font-size:.92rem;color:var(--berry);text-decoration:none;border-bottom:2px solid var(--line)}
+.proj a.gh:hover{border-bottom-color:var(--berry)}
+.proj .links{display:flex;flex-wrap:wrap;gap:6px 16px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
 .tags span{font-size:.8rem;font-weight:600;color:var(--berry);background:var(--paper);border-radius:999px;padding:1px 10px}
 .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px}
@@ -130,7 +133,6 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
 @media (max-width:680px){.journey,.grid,.exp-grid,.plat,.skill-grid{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.tag text{font-size:26px}.hint{font-size:1rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
-
 </head>
 <body>
 <div class="wrap">
@@ -146,7 +148,7 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
     <div class="hello">
       <span class="kicker" data-i="kicker">hello, pull up a chair!</span>
       <h1 data-i="h1">I'm Nicole Lee En Xin.</h1>
-      <p data-i="intro">MSc Artificial Intelligence at the University of Bristol, Computer Science graduate from Beijing Institute of Technology, and a creator with 131K+ YouTube subscribers, 114K+ Instagram followers and 50+ brand collaborations. I've lived and worked in Malaysia, China and the UK. Looking for 2027 graduate schemes and summer internships in the UK.</p>
+      <p data-i="intro">MSc Artificial Intelligence at the University of Bristol, Computer Science graduate from Beijing Institute of Technology, and a creator with 131K+ YouTube subscribers, 114K+ Instagram followers and 50+ brand collaborations. I've lived and worked in Malaysia, China and the UK. Looking for 2027 graduate schemes and summer internships.</p>
     </div>
 
     <div class="scene">
@@ -269,7 +271,7 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
         <div class="stop">
           <span class="flag" data-i="j3">United Kingdom</span>
           <strong data-i="j3-t">Bristol, 2026 – now</strong>
-          <p data-i="j3-p">Studying for an MSc in AI, representing my course, waiting tables and filming a Xiaohongshu series about all of it.</p>
+          <p data-i="j3-p">Studying for an MSc in AI, representing my course and faculty, waiting tables and filming a Xiaohongshu series about all of it.</p>
         </div>
       </div>
     </section>
@@ -315,6 +317,11 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
           <div class="row"><strong data-i="exp1">Self-employed Digital Creator</strong><span class="when">Jan 2021 – now</span></div>
           <span class="where" data-i="exp1-w">YouTube · Instagram · Xiaohongshu</span>
           <p data-i="exp1-p">Run my own content business end to end and manage collaborations with 50+ international brands. More below.</p>
+        </div>
+        <div class="item">
+          <div class="row"><strong data-i="exp3">Faculty Representative, Science, Engineering, Maths & Technology</strong><span class="when">2026 – now</span></div>
+          <span class="where" data-i="exp3-w">University of Bristol</span>
+          <p data-i="exp3-p">Represent students across the faculty and bring their feedback to faculty staff.</p>
         </div>
         <div class="item">
           <div class="row"><strong data-i="exp2">Course Representative, MSc AI</strong><span class="when">2026 – now</span></div>
@@ -379,30 +386,42 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
           <strong data-i="p1">SIS HOLO</strong>
           <span class="where" data-i="p1-s">AI holographic smartphone concept · Team lead</span>
           <p data-i="p1-p">Led a multidisciplinary team designing an emotion-aware AI phone with holographic interaction and a Y2K retro-futuristic look. Owned the product vision, design language and AI-generated video.</p>
+          <div class="links"><a class="gh" href="https://github.com/nicoleleee8532/vivo-AIGC" target="_blank" rel="noopener" data-i="p1-l">GitHub →</a></div>
           <div class="tags"><span>Product design</span><span>UI/UX</span><span>AIGC</span></div>
+        </article>
+        <article class="proj">
+          <strong data-i="p0">SpineAngle</strong>
+          <span class="where" data-i="p0-s">Scoliosis X-ray analysis and exercise planner · Home project</span>
+          <p data-i="p0-p">I have scoliosis, so I built the tool I needed. It measures Cobb angles on X-rays (auto-cropping phone photos), classifies curve patterns with an ML model (88% accuracy vs 85% for a rule baseline), and turns physiotherapy research into a personal exercise plan with drawings. Includes a PyTorch U-Net landmark pipeline, a FastAPI service and 33 tests.</p>
+          <div class="links"><a class="gh" href="https://nicoleleee8532.github.io/spineangle/" target="_blank" rel="noopener" data-i="p0-d">Live demo →</a><a class="gh" href="https://github.com/nicoleleee8532/spineangle" target="_blank" rel="noopener" data-i="p0-l">GitHub →</a></div>
+          <div class="tags"><span>PyTorch</span><span>Computer vision</span><span>JavaScript</span><span>FastAPI</span></div>
         </article>
         <article class="proj">
           <strong data-i="p2">Severe Vaccine Adverse Event Prediction</strong>
           <span class="where" data-i="p2-s">Machine learning on 40,000+ VAERS reports</span>
           <p data-i="p2-p">Compared logistic regression, random forest, XGBoost and MLP on 6% imbalanced data. Tripled recall from 13.5% to 40.4% and used SHAP to explain key risk factors.</p>
+          <div class="links"><a class="gh" href="https://github.com/nicoleleee8532/Severe-Vaccine-Adverse-Event-Prediction" target="_blank" rel="noopener" data-i="p2-l">GitHub →</a></div>
           <div class="tags"><span>Python</span><span>XGBoost</span><span>SHAP</span></div>
         </article>
         <article class="proj">
           <strong data-i="p3">Neural Dream</strong>
           <span class="where" data-i="p3-s">Real-time DeepDream art</span>
           <p data-i="p3-p">Generated dreamlike images with Inception V3, ResNet50 and VGG19, compared how each changes the result, and ran it live on a camera feed.</p>
+          <div class="links"><a class="gh" href="https://github.com/nicoleleee8532/neural-dream" target="_blank" rel="noopener" data-i="p3-l">GitHub →</a></div>
           <div class="tags"><span>PyTorch</span><span>OpenCV</span><span>CNNs</span></div>
         </article>
         <article class="proj">
           <strong data-i="p4">Avatar-Inspired Game</strong>
           <span class="where" data-i="p4-s">World-building game · UI/UX designer</span>
           <p data-i="p4-p">Designed avatars and UI in Figma and took them through to in-game effects, iterating with the programmers on the backend.</p>
+          <div class="links"><a class="gh" href="https://github.com/Ahmed-Samir101/WuXing" target="_blank" rel="noopener" data-i="p4-l">Team repo →</a></div>
           <div class="tags"><span>Figma</span><span>Game design</span><span>UI/UX</span></div>
         </article>
         <article class="proj">
           <strong data-i="p5">Movie Recommendation Website</strong>
           <span class="where" data-i="p5-s">Full-stack web app</span>
           <p data-i="p5-p">Built the recommendation logic and a responsive front end from the ground up.</p>
+          <div class="links"><a class="gh" href="https://github.com/nicoleleee8532/webcrawler" target="_blank" rel="noopener" data-i="p5-l">GitHub →</a></div>
           <div class="tags"><span>Python</span><span>HTML/CSS</span><span>RecSys</span></div>
         </article>
       </div>
@@ -412,8 +431,8 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
       <h2><svg class="doodle" viewBox="0 0 40 40"><path d="M20 4l4 10 10 1-8 7 3 11-9-6-9 6 3-11-8-7 10-1z" class="butter st" stroke-width="2"/></svg><span data-i="h-skills">Skills</span></h2>
       <div class="skill-grid">
         <div><div class="label" data-i="sk1">Programming</div><div class="chips"><span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">HTML/CSS</span></div></div>
-        <div><div class="label" data-i="sk2">AI & data</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">LightGBM</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">CNN</span><span class="chip">LSTM/GRU</span><span class="chip" data-i="sk-anno">Data annotation & QA</span></div></div>
-        <div><div class="label" data-i="sk3">Engineering</div><div class="chips"><span class="chip">Git/GitHub</span><span class="chip">VS Code</span><span class="chip">Hadoop</span><span class="chip">MapReduce</span><span class="chip">Spark</span><span class="chip">OpenCV</span><span class="chip" data-i="sk-gis">Spatial data/GIS</span></div></div>
+        <div><div class="label" data-i="sk2">AI & data</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">LightGBM</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">CNN</span><span class="chip" data-i="sk-cv">Computer vision</span><span class="chip">LSTM/GRU</span><span class="chip" data-i="sk-anno">Data annotation & QA</span></div></div>
+        <div><div class="label" data-i="sk3">Engineering</div><div class="chips"><span class="chip">Git/GitHub</span><span class="chip">VS Code</span><span class="chip">Hadoop</span><span class="chip">MapReduce</span><span class="chip">Spark</span><span class="chip">OpenCV</span><span class="chip">FastAPI</span><span class="chip" data-i="sk-gis">Spatial data/GIS</span></div></div>
         <div><div class="label" data-i="sk4">Design & product</div><div class="chips"><span class="chip">Figma</span><span class="chip">UI/UX</span><span class="chip" data-i="sk-game">Game design</span><span class="chip" data-i="sk-aigc">AIGC workflows</span><span class="chip" data-i="sk-lead">Team leadership</span><span class="chip" data-i="sk-neg">Negotiation</span></div></div>
       </div>
     </section>
@@ -432,7 +451,7 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
 const ZH={
   kicker:"你好，坐下喝杯茶吧！",
   h1:"我是李恩心。",
-  intro:"布里斯托大学人工智能硕士在读，北京理工大学计算机科学本科，YouTube 13.1 万+ 订阅、Instagram 11.4 万+ 粉丝的内容创作者，合作过 50+ 品牌。在马来西亚、中国和英国都生活和工作过。正在寻找 2027 年英国的毕业生项目和暑期实习。",
+  intro:"布里斯托大学人工智能硕士在读，北京理工大学计算机科学本科，YouTube 13.1 万+ 订阅、Instagram 11.4 万+ 粉丝的内容创作者，合作过 50+ 品牌。在马来西亚、中国和英国都生活和工作过。正在寻找 2027 年的毕业生项目和暑期实习。",
   hint:"点点桌上的东西 ↑",
   "t-edu":"教育","t-exp":"项目","t-about":"关于我","t-creator":"创作","t-contact":"联系我",
   "h-about":"关于我",
@@ -443,7 +462,7 @@ const ZH={
   "journey-p":"我在三个很不一样的国家生活过：马来西亚、中国，现在是英国。我喜欢认识不同的人、了解他们的文化、到处探索，也喜欢抓住出现在眼前的机会。每一次搬家，都意味着新的语言、新的工作和很多新收获。",
   j1:"马来西亚","j1-t":"一切开始的地方","j1-p":"在繁忙的诊所做兼职医疗助理，2021 年开始运营 YouTube 和 Instagram。",
   j2:"中国","j2-t":"北京，2023 – 2026","j2-p":"拿北京市政府奖学金用中文读计算机，做过 AI 数据质检实习，获得 vivo AIGC 大赛二等奖，还向观众推广中国旅游。",
-  j3:"英国","j3-t":"布里斯托，2026 – 现在","j3-p":"读人工智能硕士、当课程代表、做服务员，并在小红书拍一个记录这一切的系列。",
+  j3:"英国","j3-t":"布里斯托，2026 – 现在","j3-p":"读人工智能硕士、当课程和学院学生代表、做服务员，并在小红书拍一个记录这一切的系列。",
   "h-edu":"教育背景",
   edu1:"人工智能 硕士","edu1-w":"英国 布里斯托大学","edu1-p":"软件开发、算法、统计计算、深度学习、大语言模型。",
   edu2:"计算机科学 学士","edu2-w":"中国 北京理工大学","edu2-p":"GPA 3.4/4.0 · 北京市政府奖学金。机器学习、数据结构与算法、计算机网络、大数据、Web 开发。",
@@ -454,6 +473,7 @@ const ZH={
   aw4:"Meta 前端开发入门证书","aw4-p":"UI、CSS、React.js、HTML 和 JavaScript 框架。",
   "h-exp":"工作经历",
   exp1:"自由职业内容创作者","exp1-w":"YouTube · Instagram · 小红书","exp1-p":"独立运营内容事业，与 50+ 国际品牌合作。详见下方。",
+  exp3:"学院学生代表（科学、工程、数学与技术）","exp3-w":"布里斯托大学","exp3-p":"代表全学院学生，向学院教职人员反馈意见。",
   exp2:"人工智能硕士 课程代表","exp2-w":"布里斯托大学","exp2-p":"代表同届同学，向课程团队反馈意见。",
   exp4:"AI 数据质检实习生（音频与标注）","exp4-p":"检查音频数据和标注结果的准确性、一致性和完整性，协助修正标注问题，提高数据集可靠性。",
   exp5:"医疗助理","exp5-w":"马来西亚 Klinik Ling 诊所 · 兼职","exp5-p":"在繁忙的诊所安排 100+ 次预约，办理患者登记，管理 100+ 位患者的资料。",
@@ -469,6 +489,7 @@ const ZH={
   w3:"在社交媒体推广中国旅游和大学生活，为大学项目筹得 1,000 英镑。",
   w4:"直接与品牌方谈判条款、维护合作关系。",
   "h-proj":"项目",
+  p0:"SpineAngle","p0-s":"脊柱侧弯 X 光分析与训练计划 · 个人业余项目","p0-p":"我自己有脊柱侧弯，所以做了这个我需要的工具：在 X 光片上测量 Cobb 角（可自动裁剪手机拍的照片），用机器学习模型判断侧弯类型（准确率 88%，基线规则为 85%），并把物理治疗研究转化为带插图的个性化训练计划。包含 PyTorch U-Net 关键点模型、FastAPI 服务和 33 个测试。","p0-l":"GitHub →","p1-l":"GitHub →","p2-l":"GitHub →","p3-l":"GitHub →","p4-l":"团队仓库 →","p5-l":"GitHub →","p0-d":"在线体验 →",
   p1:"SIS HOLO","p1-s":"AI 全息手机概念 · 团队负责人","p1-p":"带领跨学科团队设计一款能识别情绪、支持全息交互、Y2K 复古未来风格的 AI 手机，负责产品愿景、设计语言和 AI 生成视频。",
   p2:"严重疫苗不良反应预测","p2-s":"基于 40,000+ 份 VAERS 报告的机器学习","p2-p":"在 6% 不平衡数据上比较逻辑回归、随机森林、XGBoost 和 MLP，召回率从 13.5% 提升到 40.4%，并用 SHAP 解释关键风险因素。",
   p3:"Neural Dream","p3-s":"实时 DeepDream 艺术","p3-p":"用 Inception V3、ResNet50 和 VGG19 生成梦境般的图像，比较不同网络的效果，并接入摄像头实时处理。",
@@ -476,7 +497,7 @@ const ZH={
   p5:"电影推荐网站","p5-s":"全栈 Web 应用","p5-p":"从零搭建推荐逻辑和响应式前端。",
   "h-skills":"技能",
   sk1:"编程",sk2:"AI 与数据",sk3:"工程",sk4:"设计与产品",
-  "sk-anno":"数据标注与质检","sk-gis":"空间数据/GIS","sk-game":"游戏设计","sk-aigc":"AIGC 工作流","sk-lead":"团队领导","sk-neg":"商务谈判",
+  "sk-anno":"数据标注与质检","sk-cv":"计算机视觉","sk-gis":"空间数据/GIS","sk-game":"游戏设计","sk-aigc":"AIGC 工作流","sk-lead":"团队领导","sk-neg":"商务谈判",
   "h-contact":"聊聊吧",
   "contact-p":"如果你在招 2027 毕业生项目或暑期实习，很期待收到你的消息。简历可按需提供。",
   copy:"复制邮箱",foot:"在布里斯托，配着一杯茶做成"
@@ -513,6 +534,5 @@ copyBtn.addEventListener("click",()=>{
   if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,fallback)}else fallback();
 });
 </script>
-
 </body>
 </html>
