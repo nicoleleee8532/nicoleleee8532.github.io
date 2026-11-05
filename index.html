@@ -418,7 +418,7 @@ footer{text-align:center;color:var(--muted);font-family:var(--f-hand);font-size:
         <article class="proj">
           <strong data-i="p0">SpineAngle</strong>
           <span class="where" data-i="p0-s">Scoliosis X-ray analysis and exercise planner · Home project</span>
-          <p data-i="p0-p">I have scoliosis, so I built the tool I needed. It measures Cobb angles on X-rays (auto-cropping phone photos), classifies curve patterns with an ML model (88% accuracy vs 85% for a rule baseline), and turns physiotherapy research into a personal exercise plan with drawings. Includes a PyTorch U-Net landmark pipeline, a FastAPI service and 33 tests.</p>
+          <p data-i="p0-p">I have scoliosis, so I built the tool I needed. It measures Cobb angles on X-rays automatically: a vertebra-detection model I trained on 481 real X-rays runs in the browser and is within 3.3° of expert labels on 128 unseen test images (challenge SMAPE 9.1%). It also classifies curve patterns and turns physiotherapy research into a personal exercise plan with drawings. PyTorch, ONNX Runtime Web, FastAPI, 33 tests.</p>
           <div class="links"><a class="gh" href="https://nicoleleee8532.github.io/spineangle/" target="_blank" rel="noopener" data-i="p0-d">Live demo →</a><a class="gh" href="https://github.com/nicoleleee8532/spineangle" target="_blank" rel="noopener" data-i="p0-l">GitHub →</a></div>
           <div class="tags"><span>PyTorch</span><span>Computer vision</span><span>JavaScript</span><span>FastAPI</span></div>
         </article>
@@ -516,7 +516,7 @@ const ZH={
   w3:"在社交媒体推广中国旅游和大学生活，为大学项目筹得 1,000 英镑。",
   w4:"直接与品牌方谈判条款、维护合作关系。",
   "h-proj":"项目",
-  p0:"SpineAngle","p0-s":"脊柱侧弯 X 光分析与训练计划 · 个人业余项目","p0-p":"我自己有脊柱侧弯，所以做了这个我需要的工具：在 X 光片上测量 Cobb 角（可自动裁剪手机拍的照片），用机器学习模型判断侧弯类型（准确率 88%，基线规则为 85%），并把物理治疗研究转化为带插图的个性化训练计划。包含 PyTorch U-Net 关键点模型、FastAPI 服务和 33 个测试。","p0-l":"GitHub →","p1-l":"GitHub →","p2-l":"GitHub →","p3-l":"GitHub →","p4-l":"团队仓库 →","p5-l":"GitHub →","p0-d":"在线体验 →",
+  p0:"SpineAngle","p0-s":"脊柱侧弯 X 光分析与训练计划 · 个人业余项目","p0-p":"我自己有脊柱侧弯，所以做了这个我需要的工具：自动测量 X 光片上的 Cobb 角：我用 481 张真实 X 光片训练的椎体检测模型直接在浏览器中运行，在 128 张未见过的测试图像上与专家标注平均相差 3.3°（挑战赛 SMAPE 9.1%）。还能判断侧弯类型，并把物理治疗研究转化为带插图的个性化训练计划。PyTorch、ONNX Runtime Web、FastAPI、33 个测试。","p0-l":"GitHub →","p1-l":"GitHub →","p2-l":"GitHub →","p3-l":"GitHub →","p4-l":"团队仓库 →","p5-l":"GitHub →","p0-d":"在线体验 →",
   p1:"SIS HOLO","p1-s":"AI 全息手机概念 · 团队负责人","p1-p":"带领跨学科团队设计一款能识别情绪、支持全息交互、Y2K 复古未来风格的 AI 手机，负责产品愿景、设计语言和 AI 生成视频。",
   p2:"严重疫苗不良反应预测","p2-s":"基于 40,000+ 份 VAERS 报告的机器学习","p2-p":"在 6% 不平衡数据上比较逻辑回归、随机森林、XGBoost 和 MLP，召回率从 13.5% 提升到 40.4%，并用 SHAP 解释关键风险因素。",
   p3:"Neural Dream","p3-s":"实时 DeepDream 艺术","p3-p":"用 Inception V3、ResNet50 和 VGG19 生成梦境般的图像，比较不同网络的效果，并接入摄像头实时处理。",
